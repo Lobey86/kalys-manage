@@ -1,0 +1,15 @@
+<?php         
+$this->title = "View Cities";
+$this->headTitle($this->title);
+?>
+
+<table cellpadding="2" cellspacing="2" border="0">
+<?php foreach($this->cities as $city) : ?>
+<tr>
+	<td><?php echo $this->escape($city->name);?></td>
+    <td><a href="<?php echo $this->url(array('controller'=>'index', 
+            'action'=>'delete-city', 'id'=>$city->id));?>">Delete</a></td>
+</tr>
+<?php endforeach; ?>
+</table>
+

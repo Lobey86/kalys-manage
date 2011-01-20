@@ -1,0 +1,18 @@
+<?php 
+$this->title = "Add Client Events";
+$this->headTitle($this->title);
+
+$script = '$(function() {
+		$( "#timeStart" ).datepicker({ dateFormat: "yy-mm-dd" });
+		$( "#timeEnd" ).datepicker({ dateFormat: "yy-mm-dd" });
+	});';
+
+
+$this->headLink()->appendStylesheet($this->baseUrl('styles/flick/jquery-ui-1.8.6.custom.css'));		
+$this->headScript()
+	->appendFile($this->baseUrl('js/jquery-1.4.2.min.js','text/javascript'))
+	->appendFile($this->baseUrl('js/jquery-ui-1.8.6.custom.min.js','text/javascript'))
+	->appendScript($script,'text/javascript');
+
+echo $this->formDataType;
+?>

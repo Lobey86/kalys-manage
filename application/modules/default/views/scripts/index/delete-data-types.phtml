@@ -1,0 +1,14 @@
+<?php 
+$this->title = "Delete data type";
+$this->headTitle($this->title);
+?>
+<p>Are you sure that you want to delete 
+  '<?php echo $this->escape($this->datatype['data_type_name']); ?>' ?
+</p>
+<form action="<?php echo $this->url(array('action'=>'delete-data-types')); ?>" method="post">
+<div>
+  <input type="hidden" name="id" value="<?php echo $this->datatype['id']; ?>" />
+  <input type="submit" name="del" value="Yes" />
+  <input type="submit" name="del" value="No" />
+</div>
+</form>

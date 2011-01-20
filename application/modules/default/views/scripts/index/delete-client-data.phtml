@@ -1,0 +1,16 @@
+<?php 
+$this->title = "Delete data type";
+$this->headTitle($this->title);
+var_dump($this->clientDataTypes);
+?>
+<p>Are you sure that you want to delete 
+	<strong><?php echo $this->escape($this->clientDataTypes['data_type_name']); ?></strong> with the following content:
+</p>
+<blockquote><?php echo $this->escape($this->clientDataTypes['data_value']);?></blockquote>
+<form action="<?php echo $this->url(array('action'=>'delete-client-data')); ?>" method="post">
+<div>
+  <input type="hidden" name="id" value="<?php echo $this->clientDataTypes['id']; ?>" />
+  <input type="submit" name="del" value="Yes" />
+  <input type="submit" name="del" value="No" />
+</div>
+</form>

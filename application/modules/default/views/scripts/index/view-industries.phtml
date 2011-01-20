@@ -1,0 +1,15 @@
+<?php         
+$this->title = "View Industries";
+$this->headTitle($this->title);
+?>
+
+<table cellpadding="2" cellspacing="2" border="0">
+<?php foreach($this->industries as $industry) : ?>
+<tr>
+	<td><?php echo $this->escape($industry->name);?></td>
+    <td><a href="<?php echo $this->url(array('controller'=>'index', 
+            'action'=>'delete-industry', 'id'=>$industry->id));?>">Delete</a></td>
+</tr>
+<?php endforeach; ?>
+</table>
+

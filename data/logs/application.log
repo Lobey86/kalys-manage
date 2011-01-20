@@ -1,0 +1,262 @@
+2010-04-23T12:35:59+03:00 DEBUG (7): Invalid argument: Unable to determine class to instantiate#0 D:\Libs\Zend\Navigation\Container.php(117): Zend_Navigation_Page::factory(Array)
+#1 D:\Libs\Zend\Navigation\Container.php(164): Zend_Navigation_Container->addPage(Array)
+#2 D:\Libs\Zend\Navigation.php(46): Zend_Navigation_Container->addPages(Array)
+#3 D:\Libs\Artgroup\Controller\Plugin\Administrator.php(26): Zend_Navigation->__construct(Array)
+#4 D:\Libs\Zend\Controller\Plugin\Broker.php(260): Artgroup_Controller_Plugin_Administrator->routeShutdown(Object(Zend_Controller_Request_Http))
+#5 D:\Libs\Zend\Controller\Front.php(923): Zend_Controller_Plugin_Broker->routeShutdown(Object(Zend_Controller_Request_Http))
+#6 D:\Libs\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 D:\Libs\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#8 D:\Web\imanage\index.php(33): Zend_Application->run()
+#9 {main}
+2010-04-23T14:00:12+03:00 DEBUG (7): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound#0 D:\Libs\Zend\Db\Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 D:\Libs\Zend\Db\Adapter\Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 D:\Libs\Zend\Db\Adapter\Pdo\Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 D:\Libs\Zend\Db\Adapter\Abstract.php(723): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#4 D:\Web\imanage\application\modules\objects\models\Objects.php(33): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 D:\Web\imanage\application\modules\objects\controllers\ObjectController.php(14): Objects_Model_Objects->getObjects('news', NULL)
+#6 D:\Libs\Zend\Controller\Action.php(513): Objects_ObjectController->getObjectsAction()
+#7 D:\Libs\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('getObjectsActio...')
+#8 D:\Libs\Zend\View\Helper\Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#9 [internal function]: Zend_View_Helper_Action->action('get-objects', 'object', 'objects', Array)
+#10 D:\Libs\Zend\View\Abstract.php(342): call_user_func_array(Array, Array)
+#11 [internal function]: Zend_View_Abstract->__call('action', Array)
+#12 D:\Web\imanage\application\modules\news\views\scripts\news\read.phtml(3): Zend_View->action('get-objects', 'object', 'objects', Array)
+#13 D:\Libs\Zend\View.php(108): include('D:\Web\imanage\...')
+#14 D:\Libs\Zend\View\Abstract.php(880): Zend_View->_run('D:/Web/imanage/...')
+#15 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(897): Zend_View_Abstract->render('news/read.phtml')
+#16 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(918): Zend_Controller_Action_Helper_ViewRenderer->renderScript('news/read.phtml', NULL)
+#17 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(957): Zend_Controller_Action_Helper_ViewRenderer->render()
+#18 D:\Libs\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#19 D:\Libs\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#20 D:\Libs\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('readAction')
+#21 D:\Libs\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#22 D:\Libs\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#23 D:\Libs\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#24 D:\Web\imanage\index.php(33): Zend_Application->run()
+#25 {main}
+2010-04-23T14:00:30+03:00 DEBUG (7): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound#0 D:\Libs\Zend\Db\Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 D:\Libs\Zend\Db\Adapter\Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 D:\Libs\Zend\Db\Adapter\Pdo\Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 D:\Libs\Zend\Db\Adapter\Abstract.php(723): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#4 D:\Web\imanage\application\modules\objects\models\Objects.php(33): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 D:\Web\imanage\application\modules\objects\controllers\ObjectController.php(14): Objects_Model_Objects->getObjects('news', NULL)
+#6 D:\Libs\Zend\Controller\Action.php(513): Objects_ObjectController->getObjectsAction()
+#7 D:\Libs\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('getObjectsActio...')
+#8 D:\Libs\Zend\View\Helper\Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#9 [internal function]: Zend_View_Helper_Action->action('get-objects', 'object', 'objects', Array)
+#10 D:\Libs\Zend\View\Abstract.php(342): call_user_func_array(Array, Array)
+#11 [internal function]: Zend_View_Abstract->__call('action', Array)
+#12 D:\Web\imanage\application\modules\news\views\scripts\news\read.phtml(3): Zend_View->action('get-objects', 'object', 'objects', Array)
+#13 D:\Libs\Zend\View.php(108): include('D:\Web\imanage\...')
+#14 D:\Libs\Zend\View\Abstract.php(880): Zend_View->_run('D:/Web/imanage/...')
+#15 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(897): Zend_View_Abstract->render('news/read.phtml')
+#16 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(918): Zend_Controller_Action_Helper_ViewRenderer->renderScript('news/read.phtml', NULL)
+#17 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(957): Zend_Controller_Action_Helper_ViewRenderer->render()
+#18 D:\Libs\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#19 D:\Libs\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#20 D:\Libs\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('readAction')
+#21 D:\Libs\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#22 D:\Libs\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#23 D:\Libs\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#24 D:\Web\imanage\index.php(33): Zend_Application->run()
+#25 {main}
+2010-04-23T14:02:08+03:00 DEBUG (7): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound#0 D:\Libs\Zend\Db\Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 D:\Libs\Zend\Db\Adapter\Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 D:\Libs\Zend\Db\Adapter\Pdo\Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 D:\Libs\Zend\Db\Adapter\Abstract.php(723): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#4 D:\Web\imanage\application\modules\objects\models\Objects.php(33): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 D:\Web\imanage\application\modules\objects\controllers\ObjectController.php(14): Objects_Model_Objects->getObjects('news', NULL)
+#6 D:\Libs\Zend\Controller\Action.php(513): Objects_ObjectController->getObjectsAction()
+#7 D:\Libs\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('getObjectsActio...')
+#8 D:\Libs\Zend\View\Helper\Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#9 [internal function]: Zend_View_Helper_Action->action('get-objects', 'object', 'objects', Array)
+#10 D:\Libs\Zend\View\Abstract.php(342): call_user_func_array(Array, Array)
+#11 [internal function]: Zend_View_Abstract->__call('action', Array)
+#12 D:\Web\imanage\application\modules\news\views\scripts\news\read.phtml(3): Zend_View->action('get-objects', 'object', 'objects', Array)
+#13 D:\Libs\Zend\View.php(108): include('D:\Web\imanage\...')
+#14 D:\Libs\Zend\View\Abstract.php(880): Zend_View->_run('D:/Web/imanage/...')
+#15 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(897): Zend_View_Abstract->render('news/read.phtml')
+#16 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(918): Zend_Controller_Action_Helper_ViewRenderer->renderScript('news/read.phtml', NULL)
+#17 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(957): Zend_Controller_Action_Helper_ViewRenderer->render()
+#18 D:\Libs\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#19 D:\Libs\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#20 D:\Libs\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('readAction')
+#21 D:\Libs\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#22 D:\Libs\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#23 D:\Libs\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#24 D:\Web\imanage\index.php(33): Zend_Application->run()
+#25 {main}
+2010-04-23T14:05:00+03:00 DEBUG (7): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound#0 D:\Libs\Zend\Db\Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 D:\Libs\Zend\Db\Adapter\Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 D:\Libs\Zend\Db\Adapter\Pdo\Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 D:\Libs\Zend\Db\Adapter\Abstract.php(723): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#4 D:\Web\imanage\application\modules\objects\models\Objects.php(33): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 D:\Web\imanage\application\modules\objects\controllers\ObjectController.php(14): Objects_Model_Objects->getObjects('news', NULL)
+#6 D:\Libs\Zend\Controller\Action.php(513): Objects_ObjectController->getObjectsAction()
+#7 D:\Libs\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('getObjectsActio...')
+#8 D:\Libs\Zend\View\Helper\Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#9 [internal function]: Zend_View_Helper_Action->action('get-objects', 'object', 'objects', Array)
+#10 D:\Libs\Zend\View\Abstract.php(342): call_user_func_array(Array, Array)
+#11 [internal function]: Zend_View_Abstract->__call('action', Array)
+#12 D:\Web\imanage\application\modules\news\views\scripts\news\read.phtml(3): Zend_View->action('get-objects', 'object', 'objects', Array)
+#13 D:\Libs\Zend\View.php(108): include('D:\Web\imanage\...')
+#14 D:\Libs\Zend\View\Abstract.php(880): Zend_View->_run('D:/Web/imanage/...')
+#15 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(897): Zend_View_Abstract->render('news/read.phtml')
+#16 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(918): Zend_Controller_Action_Helper_ViewRenderer->renderScript('news/read.phtml', NULL)
+#17 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(957): Zend_Controller_Action_Helper_ViewRenderer->render()
+#18 D:\Libs\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#19 D:\Libs\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#20 D:\Libs\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('readAction')
+#21 D:\Libs\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#22 D:\Libs\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#23 D:\Libs\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#24 D:\Web\imanage\index.php(33): Zend_Application->run()
+#25 {main}
+2010-04-23T14:05:08+03:00 DEBUG (7): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound#0 D:\Libs\Zend\Db\Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 D:\Libs\Zend\Db\Adapter\Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 D:\Libs\Zend\Db\Adapter\Pdo\Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 D:\Libs\Zend\Db\Adapter\Abstract.php(723): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#4 D:\Web\imanage\application\modules\objects\models\Objects.php(33): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 D:\Web\imanage\application\modules\objects\controllers\ObjectController.php(14): Objects_Model_Objects->getObjects('news', NULL)
+#6 D:\Libs\Zend\Controller\Action.php(513): Objects_ObjectController->getObjectsAction()
+#7 D:\Libs\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('getObjectsActio...')
+#8 D:\Libs\Zend\View\Helper\Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#9 [internal function]: Zend_View_Helper_Action->action('get-objects', 'object', 'objects', Array)
+#10 D:\Libs\Zend\View\Abstract.php(342): call_user_func_array(Array, Array)
+#11 [internal function]: Zend_View_Abstract->__call('action', Array)
+#12 D:\Web\imanage\application\modules\news\views\scripts\news\read.phtml(3): Zend_View->action('get-objects', 'object', 'objects', Array)
+#13 D:\Libs\Zend\View.php(108): include('D:\Web\imanage\...')
+#14 D:\Libs\Zend\View\Abstract.php(880): Zend_View->_run('D:/Web/imanage/...')
+#15 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(897): Zend_View_Abstract->render('news/read.phtml')
+#16 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(918): Zend_Controller_Action_Helper_ViewRenderer->renderScript('news/read.phtml', NULL)
+#17 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(957): Zend_Controller_Action_Helper_ViewRenderer->render()
+#18 D:\Libs\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#19 D:\Libs\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#20 D:\Libs\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('readAction')
+#21 D:\Libs\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#22 D:\Libs\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#23 D:\Libs\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#24 D:\Web\imanage\index.php(33): Zend_Application->run()
+#25 {main}
+2010-04-23T14:05:19+03:00 DEBUG (7): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound#0 D:\Libs\Zend\Db\Statement.php(320): Zend_Db_Statement_Pdo->_execute(Array)
+#1 D:\Libs\Zend\Db\Adapter\Abstract.php(468): Zend_Db_Statement->execute(Array)
+#2 D:\Libs\Zend\Db\Adapter\Pdo\Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Select), Array)
+#3 D:\Libs\Zend\Db\Adapter\Abstract.php(723): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Select), Array)
+#4 D:\Web\imanage\application\modules\objects\models\Objects.php(33): Zend_Db_Adapter_Abstract->fetchAll(Object(Zend_Db_Select))
+#5 D:\Web\imanage\application\modules\objects\controllers\ObjectController.php(14): Objects_Model_Objects->getObjects('news', NULL)
+#6 D:\Libs\Zend\Controller\Action.php(513): Objects_ObjectController->getObjectsAction()
+#7 D:\Libs\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('getObjectsActio...')
+#8 D:\Libs\Zend\View\Helper\Action.php(135): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#9 [internal function]: Zend_View_Helper_Action->action('get-objects', 'object', 'objects', Array)
+#10 D:\Libs\Zend\View\Abstract.php(342): call_user_func_array(Array, Array)
+#11 [internal function]: Zend_View_Abstract->__call('action', Array)
+#12 D:\Web\imanage\application\modules\news\views\scripts\news\read.phtml(3): Zend_View->action('get-objects', 'object', 'objects', Array)
+#13 D:\Libs\Zend\View.php(108): include('D:\Web\imanage\...')
+#14 D:\Libs\Zend\View\Abstract.php(880): Zend_View->_run('D:/Web/imanage/...')
+#15 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(897): Zend_View_Abstract->render('news/read.phtml')
+#16 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(918): Zend_Controller_Action_Helper_ViewRenderer->renderScript('news/read.phtml', NULL)
+#17 D:\Libs\Zend\Controller\Action\Helper\ViewRenderer.php(957): Zend_Controller_Action_Helper_ViewRenderer->render()
+#18 D:\Libs\Zend\Controller\Action\HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#19 D:\Libs\Zend\Controller\Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#20 D:\Libs\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('readAction')
+#21 D:\Libs\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#22 D:\Libs\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#23 D:\Libs\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#24 D:\Web\imanage\index.php(33): Zend_Application->run()
+#25 {main}
+2010-04-29T17:23:15+03:00 DEBUG (7): Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()#0 D:\Libs\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 D:\Libs\Zend\Mail.php(1178): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 D:\Web\imanage\application\modules\user\controllers\AdministratorController.php(65): Zend_Mail->send()
+#3 D:\Libs\Zend\Controller\Action.php(513): User_AdministratorController->remindPasswordAction()
+#4 D:\Libs\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('remindPasswordA...')
+#5 D:\Libs\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 D:\Libs\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 D:\Libs\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#8 D:\Web\imanage\index.php(33): Zend_Application->run()
+#9 {main}
+2010-04-29T17:24:23+03:00 DEBUG (7): Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()#0 D:\Libs\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 D:\Libs\Zend\Mail.php(1178): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 D:\Web\imanage\application\modules\user\controllers\AdministratorController.php(65): Zend_Mail->send()
+#3 D:\Libs\Zend\Controller\Action.php(513): User_AdministratorController->remindPasswordAction()
+#4 D:\Libs\Zend\Controller\Dispatcher\Standard.php(289): Zend_Controller_Action->dispatch('remindPasswordA...')
+#5 D:\Libs\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 D:\Libs\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 D:\Libs\Zend\Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#8 D:\Web\imanage\index.php(33): Zend_Application->run()
+#9 {main}
+2010-08-17T15:36:57+03:00 DEBUG (7): Request uri: /page-search
+Http host: pik.org.cy
+Client IP: 91.149.137.209
+User agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; ru; rv:1.9.2.8) Gecko/20100722 Firefox/3.6.8 FirePHP/0.4
+Server time: 2010-08-17 15:36:57
+Referer: http://pik.org.cy/page-search
+Message: Field name "pageId" not found in document.
+Trace:
+#0 /home/p/i/pik/web/public_html/library/Zend/Search/Lucene/Document.php(118): Zend_Search_Lucene_Document->getField('pageId')
+#1 /home/p/i/pik/web/public_html/library/Zend/Search/Lucene/Search/QueryHit.php(81): Zend_Search_Lucene_Document->getFieldValue('pageId')
+#2 /home/p/i/pik/web/public_html/application/modules/default/views/scripts/search/index.phtml(5): Zend_Search_Lucene_Search_QueryHit->__get('pageId')
+#3 /home/p/i/pik/web/public_html/library/Zend/View.php(108): include('/home/p/i/pik/w...')
+#4 /home/p/i/pik/web/public_html/library/Zend/View/Abstract.php(880): Zend_View->_run('/home/p/i/pik/w...')
+#5 /home/p/i/pik/web/public_html/library/Zend/Controller/Action/Helper/ViewRenderer.php(897): Zend_View_Abstract->render('search/index.ph...')
+#6 /home/p/i/pik/web/public_html/library/Zend/Controller/Action/Helper/ViewRenderer.php(918): Zend_Controller_Action_Helper_ViewRenderer->renderScript('search/index.ph...', NULL)
+#7 /home/p/i/pik/web/public_html/library/Zend/Controller/Action/Helper/ViewRenderer.php(957): Zend_Controller_Action_Helper_ViewRenderer->render()
+#8 /home/p/i/pik/web/public_html/library/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#9 /home/p/i/pik/web/public_html/library/Zend/Controller/Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#10 /home/p/i/pik/web/public_html/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('indexAction')
+#11 /home/p/i/pik/web/public_html/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /home/p/i/pik/web/public_html/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#13 /home/p/i/pik/web/public_html/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#14 /home/p/i/pik/web/public_html/index.php(35): Zend_Application->run()
+#15 {main}
+Request data: array (
+  'pageNumber' => 1,
+  'lang' => 'en',
+  'module' => 'default',
+  'controller' => 'search',
+  'action' => 'index',
+  'searchQuery' => 'risus',
+  'x' => '15',
+  'y' => '18',
+)
+Cookie data:
+PHPSESSID: 'dd82d0e1a6ad2a24dab513afd2803549'
+
+
+2010-08-17T15:37:01+03:00 DEBUG (7): Request uri: /page-search
+Http host: pik.org.cy
+Client IP: 91.149.137.209
+User agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; ru; rv:1.9.2.8) Gecko/20100722 Firefox/3.6.8 FirePHP/0.4
+Server time: 2010-08-17 15:37:01
+Referer: http://pik.org.cy/page-id/155
+Message: Field name "pageId" not found in document.
+Trace:
+#0 /home/p/i/pik/web/public_html/library/Zend/Search/Lucene/Document.php(118): Zend_Search_Lucene_Document->getField('pageId')
+#1 /home/p/i/pik/web/public_html/library/Zend/Search/Lucene/Search/QueryHit.php(81): Zend_Search_Lucene_Document->getFieldValue('pageId')
+#2 /home/p/i/pik/web/public_html/application/modules/default/views/scripts/search/index.phtml(5): Zend_Search_Lucene_Search_QueryHit->__get('pageId')
+#3 /home/p/i/pik/web/public_html/library/Zend/View.php(108): include('/home/p/i/pik/w...')
+#4 /home/p/i/pik/web/public_html/library/Zend/View/Abstract.php(880): Zend_View->_run('/home/p/i/pik/w...')
+#5 /home/p/i/pik/web/public_html/library/Zend/Controller/Action/Helper/ViewRenderer.php(897): Zend_View_Abstract->render('search/index.ph...')
+#6 /home/p/i/pik/web/public_html/library/Zend/Controller/Action/Helper/ViewRenderer.php(918): Zend_Controller_Action_Helper_ViewRenderer->renderScript('search/index.ph...', NULL)
+#7 /home/p/i/pik/web/public_html/library/Zend/Controller/Action/Helper/ViewRenderer.php(957): Zend_Controller_Action_Helper_ViewRenderer->render()
+#8 /home/p/i/pik/web/public_html/library/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()
+#9 /home/p/i/pik/web/public_html/library/Zend/Controller/Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()
+#10 /home/p/i/pik/web/public_html/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('indexAction')
+#11 /home/p/i/pik/web/public_html/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#12 /home/p/i/pik/web/public_html/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#13 /home/p/i/pik/web/public_html/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()
+#14 /home/p/i/pik/web/public_html/index.php(35): Zend_Application->run()
+#15 {main}
+Request data: array (
+  'pageNumber' => 1,
+  'lang' => 'en',
+  'module' => 'default',
+  'controller' => 'search',
+  'action' => 'index',
+  'searchQuery' => 'risus',
+  'x' => '0',
+  'y' => '0',
+)
+Cookie data:
+PHPSESSID: 'dd82d0e1a6ad2a24dab513afd2803549'
+
+

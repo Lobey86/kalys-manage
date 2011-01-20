@@ -1,0 +1,16 @@
+<?php         
+$this->title = "View Data Types";
+$this->headTitle($this->title);
+
+?>
+
+<table cellpadding="2" cellspacing="2" border="0">
+<?php foreach($this->events as $event) : ?>
+<tr>
+	<td><?php echo $this->escape($event->event_name);?></td>
+    <td><a href="<?php echo $this->url(array('controller'=>'index', 
+            'action'=>'delete-event-type', 'id'=>$event->id));?>">Delete</a></td>
+</tr>
+<?php endforeach; ?>
+</table>
+
