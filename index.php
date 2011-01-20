@@ -1,7 +1,7 @@
 <?php
 /**
  * Project Jamal
- * rrrvvvasdfasdf
+ *
  * @author  Alex
  * @version 0.002
  */
