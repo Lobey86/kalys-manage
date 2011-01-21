@@ -1,0 +1,43 @@
+<?php         
+$this->title = "My Clients";
+$this->headTitle($this->title);
+?>
+<table cellpadding="3" cellspacing="0" border="0">
+<tr>
+	<td><p><a href="<?php echo $this->url(array('controller'=>'index', 
+        'action'=>'view-clients'));?>">View Clients</a></p></td>
+	<td><p><a href="<?php echo $this->url(array('controller'=>'index', 
+        'action'=>'add-client'));?>">Add new Client</a></p></td>
+    <td>&nbsp;&nbsp;</td>
+	<td><p><a href="<?php echo $this->url(array('controller'=>'index', 
+        'action'=>'view-agents'));?>">View Agents</a></p></td>
+	<td><p><a href="<?php echo $this->url(array('controller'=>'index', 
+        'action'=>'add-agent'));?>">Add new Agent</a></p></td>
+    <td>&nbsp;&nbsp;</td>
+	<td><p><a href="<?php echo $this->url(array('controller'=>'index', 
+        'action'=>'view-cities'));?>"><?php echo $this->translate('View Cities')?></a></p></td>
+	<td><p><a href="<?php echo $this->url(array('controller'=>'index', 
+        'action'=>'add-city'));?>">Add new City</a></p></td>
+    <td>&nbsp;&nbsp;</td>
+	<td><p><a href="<?php echo $this->url(array('controller'=>'index', 
+        'action'=>'view-industries'));?>">View Industries</a></p></td>
+	<td><p><a href="<?php echo $this->url(array('controller'=>'index', 
+        'action'=>'add-industry'));?>">Add new Industry</a></p></td>
+</tr>
+<tr>
+	<td><p><a href="<?php echo $this->url(array('controller'=>'index', 
+        'action'=>'view-data-types'));?>">View Data Types</a></p></td>
+	<td><p><a href="<?php echo $this->url(array('controller'=>'index', 
+        'action'=>'add-data-type'));?>">Add new Data Type</a></p></td>
+	<td>&nbsp;&nbsp;</td>
+	<td><p><a href="<?php echo $this->url(array('controller'=>'index', 
+        'action'=>'view-event-types'));?>">View Event Types</a></p></td>
+	<td><p><a href="<?php echo $this->url(array('controller'=>'index', 
+        'action'=>'add-event-type'));?>">Add new Event Type</a></p></td>
+	<td>&nbsp;&nbsp;</td>
+</tr>
+<tr>
+	<td><p><a href="<?php echo $this->url(array('controller'=>'index', 
+        'action'=>'search-clients'));?>">Search Client Database</a></p></td>
+</tr>
+</table>

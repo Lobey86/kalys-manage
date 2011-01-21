@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+
+.form-object dd, .form-object dt {
+	padding: 5px;
+	margin: 0px;
+}
+.form-object dd {
+	margin-bottom: 10px;
+}
+.form-object dt {
+	font-weight: bold;
+}
+.focused-dd, .focused-dt {
+	background-color: #b8ebff;
+}
+.form-object ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+.form-object .error-dd, .form-object .error-dt {
+	background-color: #FFDFDF !important;
+}
+.form-object ul.errors {
+	color: red;
+	font-size: 0.9em;
+}
+.form-object p {
+	margin: 0px;
+	padding: 0px;
+}
+.form-object label.required span {
+	color: red;
+}
+.form-object .form-object-border {
+	border: solid 1px gray;
+}

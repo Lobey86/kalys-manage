@@ -1,0 +1,14 @@
+<?php 
+$this->title = "Delete industry";
+$this->headTitle($this->title);
+?>
+<p>Are you sure that you want to delete 
+  '<?php echo $this->escape($this->industry['name']); ?>' ?
+</p>
+<form action="<?php echo $this->url(array('action'=>'delete-industry')); ?>" method="post">
+<div>
+  <input type="hidden" name="id" value="<?php echo $this->industry['id']; ?>" />
+  <input type="submit" name="del" value="Yes" />
+  <input type="submit" name="del" value="No" />
+</div>
+</form>

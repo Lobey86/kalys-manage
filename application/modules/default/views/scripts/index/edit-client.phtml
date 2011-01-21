@@ -1,0 +1,63 @@
+<?php 
+$this->title = "Edit Client";
+$this->headTitle($this->title);
+
+
+
+?>
+<table cellpadding="3" cellspacing="3" border="0">
+	<tr>
+		<td valign="top"><?php echo $this->form ;?></td>
+		<td width="20"></td>
+		<td valign="top">
+			<br>
+            <h3>Existing Client Data</h3>
+            
+            <table cellpadding="3" cellspacing="2" border="0">
+            
+            <tr>
+            	<td colspan="2">
+            		<a href="<?php echo $this->url(array('controller'=>'index', 
+            'action'=>'add-client-data', 'id'=>$this->id));?>">Add Extra Client Data</a>
+            	</td>
+           </tr>
+           <tr><td height="15"></td></tr>
+            <?php foreach($this->clientDataTypes as $data):?>
+            <tr>
+	            <td valign="top"><strong><?php echo $data['data_type_name'];?>:</strong></td>
+	            <td valign="top"><?php echo $data['data_value']; ?></td>
+	            <td valign="top">	            	
+            		<a href="<?php echo $this->url(array('controller'=>'index', 
+            'action'=>'delete-client-data', 'id'=>$data["id"]));?>">delete</a>
+				</td>
+            </tr>
+            <?php endforeach;?>
+            </table>
+        </td>
+        <td valign="top">
+        	<br>
+            <h3>Existing Client Events</h3>
+            <table cellpadding="3" cellspacing="2" border="0">
+            	<tr>
+            		<td>
+            			<a href="<?php echo $this->url(array('controller'=>'index', 
+            'action'=>'add-client-event', 'id'=>$this->id));?>">Add Extra Client Events</a>
+            		</td>
+            	</tr>
+	           <tr><td height="15"></td></tr>
+	            <?php foreach($this->clientEvents as $event):?>
+	            <tr>
+		            <td valign="top"><strong><?php echo $event['event_name'];?>:</strong></td>
+		            <td valign="top"><?php echo $event['time_start']; ?></td>
+		            <td valign="top"><?php echo $event['time_end']; ?></td>
+		            <td valign="top">	            	
+	            		<a href="<?php echo $this->url(array('controller'=>'index', 
+	            'action'=>'delete-client-event', 'id'=>$event["id"]));?>">delete</a>
+					</td>
+	            </tr>
+	            <?php endforeach;?>
+            
+            </table>
+        </td>
+	</tr>
+</table>
