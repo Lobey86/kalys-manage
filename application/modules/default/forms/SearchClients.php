@@ -22,7 +22,7 @@ class Default_Form_SearchClients extends Zend_Form
         
         */
         
-        
+/*       
         $clientName = new Zend_Form_Element_Text('clientName');
         $clientName->setLabel('Client Name')
         		->addFilter('StripTags')
@@ -57,13 +57,21 @@ class Default_Form_SearchClients extends Zend_Form
         $eventType = new Zend_Form_Element_Select('eventType');
         $eventType->setLabel('Select');
         		
+        $eventExpired = new Zend_Form_Element_Checkbox('eventExpired');
+        $eventExpired->setLabel('Event is Expired');
+        		
+$clientName,$contactName,
+$address, $city, $zipcode,
+$datatype, $data,
+$eventType, $eventExpired,    		
+        		
+*/        		
+        		
         $eventDeadline = new Zend_Form_Element_Text('eventDeadline');
         $eventDeadline->setLabel('Deadline')
         		->addFilter('StripTags')
         		->addFilter('StringTrim');
-        		
-        $eventExpired = new Zend_Form_Element_Checkbox('eventExpired');
-        $eventExpired->setLabel('Event is Expired');
+
         
         $agent = new Zend_Form_Element_Select('agent');
         $agent->setLabel('Agent Assigned');
@@ -73,10 +81,8 @@ class Default_Form_SearchClients extends Zend_Form
         $submit->setAttrib('id', 'submitbutton');
 
         $this->addElements(
-        			array($clientName,$contactName,
-        			$address, $city, $zipcode,
-        			$datatype, $data,
-        			$eventType, $eventDeadline, $eventExpired,
+        			array(
+        			$eventDeadline,
         			$agent,
         			$submit)
         			);

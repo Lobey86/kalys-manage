@@ -1,52 +1,19 @@
 <?php 
 $this->title = "Search Clients";
 $this->headTitle($this->title);
+
+$script = '$(function() {
+		$( "#eventDeadline" ).datepicker({ dateFormat: "yy-mm-dd" });
+	});';
+
+
+$this->headLink()->appendStylesheet($this->baseUrl('styles/flick/jquery-ui-1.8.6.custom.css'));		
+$this->headScript()
+	->appendFile($this->baseUrl('js/jquery-1.4.2.min.js','text/javascript'))
+	->appendFile($this->baseUrl('js/jquery-ui-1.8.6.custom.min.js','text/javascript'))
+	->appendScript($script,'text/javascript');
+	
+print_r($_POST);
+echo $this->form ;
 ?>
 
-<form id="searchclients" enctype="application/x-www-form-urlencoded" action="" method="post"><dl class="zend_form">
-<dt id="clientName-label"><label for="clientName" class="optional">Client Name</label></dt>
-
-<dd id="clientName-element">
-<input type="text" name="clientName" id="clientName" value="<?php echo $this->form->getValue('clientName')?>"></dd>
-<dt id="contactName-label"><label for="contactName" class="optional">Contact Person</label></dt>
-<dd id="contactName-element">
-<input type="text" name="contactName" id="contactName" value=""></dd>
-<dt id="address-label"><label for="address" class="optional">Address</label></dt>
-<dd id="address-element">
-<input type="text" name="address" id="address" value=""></dd>
-<dt id="city-label"><label for="city" class="optional">City</label></dt>
-<dd id="city-element">
-<select name="city" id="city">
-    
-</select></dd>
-<dt id="zipcode-label"><label for="zipcode" class="optional">Zip Code</label></dt>
-
-<dd id="zipcode-element">
-<input type="text" name="zipcode" id="zipcode" value=""></dd>
-<dt id="dataType-label"><label for="dataType" class="optional">Select Data Type</label></dt>
-<dd id="dataType-element">
-<select name="dataType" id="dataType">
-    
-</select></dd>
-<dt id="data-label"><label for="data" class="optional">Data</label></dt>
-<dd id="data-element">
-<input type="text" name="data" id="data" value=""></dd>
-<dt id="eventType-label"><label for="eventType" class="optional">Select</label></dt>
-<dd id="eventType-element">
-<select name="eventType" id="eventType">
-    
-
-</select></dd>
-<dt id="eventDeadline-label"><label for="eventDeadline" class="optional">Deadline</label></dt>
-<dd id="eventDeadline-element">
-<input type="text" name="eventDeadline" id="eventDeadline" value=""></dd>
-<dt id="eventExpired-label"><label for="eventExpired" class="optional">Event is Expired</label></dt>
-<dd id="eventExpired-element">
-<input type="hidden" name="eventExpired" value="0"><input type="checkbox" name="eventExpired" id="eventExpired" value="1"></dd>
-<dt id="agent-label"><label for="agent" class="optional">Agent Assigned</label></dt>
-<dd id="agent-element">
-<select name="agent" id="agent">
-    
-</select></dd>
-<dt id="submit-label">&#160;</dt><dd id="submit-element">
-<input type="submit" name="submit" id="submitbutton" value="Search Clients"></dd></dl></form>

@@ -508,6 +508,26 @@ class IndexController extends Zend_Controller_Action
     	$form = new Default_Form_SearchClients(); 
         $form->submit->setLabel('Search Clients');
     	
+        $agents = new Default_Model_Agents();
+        $form->getElement('agent')->setMultiOptions($agents->getAllAgentsSelect());
+        
+    	if ($this->getRequest()->isPost()) {
+            $formData = $this->getRequest()->getPost();
+            if ($form->isValid($formData)) {
+                $date = $form->getValue('active');
+                $agent = $form->getValue('agent');
+                
+                //$result = new Default_Model_SearchClients();
+                //$result->fetchSearchResults($date,$agent);
+                
+				//$this->_helper->redirector('index');
+            } else {
+            	
+                $form->populate($formData);
+            }
+        } 
+        
+        
         $this->view->form = $form;
     	
     }
