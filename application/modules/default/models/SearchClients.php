@@ -1,15 +1,22 @@
 <?php
-class Default_Model_SearchClients extends Zend_Db_Table_Abstract {
+class Default_Model_SearchClients extends Zend_Db_Table_Select {
+	
+	protected $_name = 'clients';
+	
 	public function fetchSearchResults($date,$agent){
 		$data = array();
 		
-		$sql = "select * from clients where ";
+		$sql = "SELECT
+*
+from clients left join events on clients.id=events.client_id
+WHERE
+month(events.time_start) = month(".$date.")
+and
+clients.agent_id = ".$agent."";
+		//print $sql;
+		//return $sql;
+		$data = $this->fetchAll($sql);
 		
-		$datatypes = $this->fetchAll();
-		
-		foreach ($datatypes as $datatype) {
-			$data[$datatype->id]=$datatype->data_type_name;			
-		}
 		return $data;
 	}
 	

@@ -514,11 +514,13 @@ class IndexController extends Zend_Controller_Action
     	if ($this->getRequest()->isPost()) {
             $formData = $this->getRequest()->getPost();
             if ($form->isValid($formData)) {
-                $date = $form->getValue('active');
+                $date = $form->getValue('eventDeadline');
                 $agent = $form->getValue('agent');
                 
-                //$result = new Default_Model_SearchClients();
-                //$result->fetchSearchResults($date,$agent);
+                $result = new Default_Model_Clients();
+                
+                
+                $this->view->searchResults = $result->fetchSearchResults($date,$agent); 
                 
 				//$this->_helper->redirector('index');
             } else {

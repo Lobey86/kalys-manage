@@ -57,7 +57,22 @@ class Default_Model_Clients extends Zend_Db_Table_Abstract {
     {
         $this->delete('id =' . (int)$id);
     }
-	
+    
+	public function fetchSearchResults($date,$agent){
+		 
+		$sql = "SELECT
+*
+from clients left join events on clients.id=events.client_id
+WHERE
+month(events.time_start) = month('$date')
+and
+clients.agent_id = $agent";
+		$stmt = $this->getAdapter()->query($sql);
+
+		$data = $stmt->fetchAll();
+		
+		return $data;
+	}	
 	
 	
 	
