@@ -520,18 +520,20 @@ class IndexController extends Zend_Controller_Action
                 $result = new Default_Model_Clients();
                 
                 
-                $this->view->searchResults = $result->fetchSearchResults($date,$agent); 
-                
+                //$this->view->searchResults = $result->fetchSearchResults($date,$agent);
+                $document = $result->fetchSearchResults($date,$agent);
+                $this->_helper->layout()->resetMvcInstance();
+                $this->getResponse()
+                ->setHeader('Content-type', 'application/x-pdf')
+                ->setHeader('Content-Disposition', 'inline; filename=kalys-report.pdf')
+                ->setBody($document);
 				//$this->_helper->redirector('index');
             } else {
-            	
                 $form->populate($formData);
             }
-        } 
-        
-        
-        $this->view->form = $form;
-    	
+        } else {
+        	$this->view->form = $form;
+        }
     }
     
     
