@@ -9,6 +9,7 @@ RewriteEngine On
 
 
 RewriteEngine On
+RewriteRule ^(uploads|images|css|js|fonts|styles) - [L]
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d

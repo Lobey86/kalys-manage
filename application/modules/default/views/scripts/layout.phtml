@@ -8,12 +8,51 @@ echo $this->doctype(); ?>
 <head>
     <?php echo $this->headMeta(); ?> 
     <?php echo $this->headTitle(); ?>
-    <?php echo $this->headLink()->prependStylesheet($this->baseUrl().'/css/site.css'); ?>
+    <?php echo $this->headLink()->prependStylesheet($this->baseUrl().'/styles/style.css'); ?>
     <?php echo $this->headScript();?>
 </head>
 <body>
-<div id="content">
-    <h1><?php echo $this->escape($this->title); ?></h1>
+<div class="header">
+<img src="<?php echo $this->baseUrl().'/images/kalys-logo.jpg';?>" style="float:left;margin-right:40px"/>
+<div class="title"><h1><?php echo $this->escape($this->title); ?></h1></div>
+<div class="clearfloat"></div>
+</div>
+<div class="sidebar">
+<div>
+	<a href="<?php echo $this->url(array('controller'=>'index', 
+		'action'=>'view-clients'));?>">View Clients</a>
+	<a href="<?php echo $this->url(array('controller'=>'index', 
+		'action'=>'add-client'));?>">Add new Client</a></div>
+<div>
+	<a href="<?php echo $this->url(array('controller'=>'index', 
+		'action'=>'view-agents'));?>">View Agents</a>
+	<a href="<?php echo $this->url(array('controller'=>'index', 
+		'action'=>'add-agent'));?>">Add new Agent</a></div>
+<div>
+	<a href="<?php echo $this->url(array('controller'=>'index', 
+		'action'=>'view-cities'));?>"><?php echo $this->translate('View Cities')?></a>
+	<a href="<?php echo $this->url(array('controller'=>'index', 
+		'action'=>'add-city'));?>">Add new City</a></div>
+<div>
+	<a href="<?php echo $this->url(array('controller'=>'index', 
+		'action'=>'view-industries'));?>">View Industries</a>
+	<a href="<?php echo $this->url(array('controller'=>'index', 
+		'action'=>'add-industry'));?>">Add new Industry</a></div>
+<div>
+	<a href="<?php echo $this->url(array('controller'=>'index', 
+		'action'=>'view-data-types'));?>">View Data Types</a>
+	<a href="<?php echo $this->url(array('controller'=>'index', 
+		'action'=>'add-data-type'));?>">Add new Data Type</a></div>
+<div>
+	<a href="<?php echo $this->url(array('controller'=>'index', 
+		'action'=>'view-event-types'));?>">View Event Types</a>
+	<a href="<?php echo $this->url(array('controller'=>'index', 
+		'action'=>'add-event-type'));?>">Add new Event Type</a></div>
+<div><a href="<?php echo $this->url(array('controller'=>'index', 
+		'action'=>'search-clients'));?>">Search Client Database</a></div>
+</div>
+<div class="content">
+    
     <?php echo $this->layout()->content; ?>
 </div>
 </body>

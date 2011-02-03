@@ -506,7 +506,7 @@ class IndexController extends Zend_Controller_Action
     public function searchClientsAction()
     {
     	$form = new Default_Form_SearchClients(); 
-        $form->submit->setLabel('Search Clients');
+        $form->submit->setLabel('Export Search Results in PDF format');
     	
         $agents = new Default_Model_Agents();
         $form->getElement('agent')->setMultiOptions($agents->getAllAgentsSelect());
@@ -519,15 +519,12 @@ class IndexController extends Zend_Controller_Action
                 
                 $result = new Default_Model_Clients();
                 
-                
-                //$this->view->searchResults = $result->fetchSearchResults($date,$agent);
                 $document = $result->fetchSearchResults($date,$agent);
                 $this->_helper->layout()->resetMvcInstance();
                 $this->getResponse()
                 ->setHeader('Content-type', 'application/x-pdf')
                 ->setHeader('Content-Disposition', 'inline; filename=kalys-report.pdf')
                 ->setBody($document);
-				//$this->_helper->redirector('index');
             } else {
                 $form->populate($formData);
             }
