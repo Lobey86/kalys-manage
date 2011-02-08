@@ -83,8 +83,6 @@ class Default_Model_Clients extends Zend_Db_Table_Abstract {
 		$Agent = new Default_Model_Agents();
 		$agentName = $Agent->getAgent($agent);
 		
-		//var_dump($agentName);
-		
 		$mailMerge->assign('agentname', $agentName["name"]);
 		$mailMerge->assign('today', date('Y-m-d'));
 		$mailMerge->assign('date',  $date);
@@ -93,13 +91,39 @@ class Default_Model_Clients extends Zend_Db_Table_Abstract {
 		 
 		$document = $mailMerge->retrieveDocument('pdf');
 		
-		//file_put_contents('kalys-report.pdf', $document);
- 
-		//unset($mailMerge);
-		
 		return $document;
 	}	
+
+	public function fetchExportResults(){
+		$sql = "
+		SELECT name,phone,address,city,zip_code,agent_id,working_days,working_hours 
+		FROM clients
+		order by id;
+		";
+		$stmt = $this->getAdapter()->query($sql);
+		$data = $stmt->fetchAll();
+		
+		foreach($data as $row){
+			foreach ($row as $key=>$value)
+				print $value.";";
+			print "\r\n";
+		}
+		
+	/*
 	
+	
+	 
+	$businessName
+	$businessPhone
+	$businessAddress
+	$businessCity
+	$businessZip
+	$businessAgent
+	$businessDays
+	$businessHours 	
+	
+	*/
+	} 
 	
 	
 }

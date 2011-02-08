@@ -69,7 +69,7 @@ class IndexController extends Zend_Controller_Action
                 $event = new Default_Model_Events();
                 $event->deleteEvent($id);
             }
-            $this->_helper->redirector('index');
+            $this->_helper->redirector('view-event-types');
         } else {
             $id = $this->_getParam('id', 0);
             $event = new Default_Model_Events();
@@ -98,7 +98,7 @@ class IndexController extends Zend_Controller_Action
                 $datatype = new Default_Model_Datatype();
                 $datatype->addDatatype($datatypeName);
                 
-                $this->_helper->redirector('index');
+                $this->_helper->redirector('view-data-types');
             } else {
                 $form->populate($formData);
             }
@@ -115,7 +115,7 @@ class IndexController extends Zend_Controller_Action
                 $datatype = new Default_Model_Datatype();
                 $datatype->deleteDatatype($id);
             }
-            $this->_helper->redirector('index');
+            $this->_helper->redirector('view-data-types');
         } else {
             $id = $this->_getParam('id', 0);
             $datatype = new Default_Model_Datatype();
@@ -140,13 +140,13 @@ class IndexController extends Zend_Controller_Action
         if ($this->getRequest()->isPost()) {
             $formData = $this->getRequest()->getPost();
             if ($form->isValid($formData)) {
-                $agentName = $form->getValue('agentName');
-                $agentActive = $form->getValue('agentActive');
-                $agentDefault = $form->getValue('agentDefault');
+                $agentName = $form->getValue('name');
+                $agentActive = $form->getValue('active');
+                $agentDefault = $form->getValue('default');
                 $agents = new Default_Model_Agents();
                 $agents->addAgent($agentName, $agentActive,$agentDefault);
                 
-                $this->_helper->redirector('index');
+                $this->_helper->redirector('view-agents');
             } else {
                 $form->populate($formData);
             }
@@ -171,7 +171,7 @@ class IndexController extends Zend_Controller_Action
                 $agent = new Default_Model_Agents();
                 $agent->updateAgent($id,$agentName, $agentActive, $agentDefault);
                 
-                $this->_helper->redirector('index');
+                $this->_helper->redirector('view-agents');
             } else {
                 $form->populate($formData);
             }
@@ -195,7 +195,7 @@ class IndexController extends Zend_Controller_Action
                 $agent = new Default_Model_Agents();
                 $agent->deleteAgent($id);
             }
-            $this->_helper->redirector('index');
+            $this->_helper->redirector('view-agents');
         } else {
             $id = $this->_getParam('id', 0);
             $agent = new Default_Model_Agents();
@@ -222,7 +222,7 @@ class IndexController extends Zend_Controller_Action
                 $industry = new Default_Model_Industry();
                 $industry->deleteIndustry($id);
             }
-            $this->_helper->redirector('index');
+            $this->_helper->redirector('view-industries');
         } else {
             $id = $this->_getParam('id', 0);
             $industry = new Default_Model_Industry();
@@ -243,7 +243,7 @@ class IndexController extends Zend_Controller_Action
                 $industry = new Default_Model_Industry();
                 $industry->addIndustry($name);
                 
-                $this->_helper->redirector('index');
+                $this->_helper->redirector('view-industries');
             } else {
                 $form->populate($formData);
             }
@@ -274,7 +274,7 @@ class IndexController extends Zend_Controller_Action
                 $city = new Default_Model_City();
                 $city->deleteCity($id);
             }
-            $this->_helper->redirector('index');
+            $this->_helper->redirector('view-cities');
         } else {
             $id = $this->_getParam('id', 0);
             $city = new Default_Model_City();
@@ -295,7 +295,7 @@ class IndexController extends Zend_Controller_Action
                 $city = new Default_Model_City();
                 $city->addCity($name);
                 
-                $this->_helper->redirector('index');
+                $this->_helper->redirector('view-cities');
             } else {
                 $form->populate($formData);
             }
@@ -375,7 +375,7 @@ class IndexController extends Zend_Controller_Action
                 $clientdata = new Default_Model_ClientData();
                 $clientdata->deleteData($id);
             }
-            $this->_helper->redirector('index');
+            $this->_helper->redirector('view-clients');
         } else {
             $id = $this->_getParam('id', 0);
             $clientdata = new Default_Model_ClientData();
@@ -419,7 +419,7 @@ class IndexController extends Zend_Controller_Action
                 $clients = new Default_Model_Clients();
                 $clients->addClient($name, $phone,$fax, $address, $contact, $hours, $days, $closing, $city, $industry, $zipcode, $active, $agent);
                 
-                $this->_helper->redirector('index');
+                $this->_helper->redirector('view-clients');
             } else {
                 $form->populate($formData);
             }
@@ -476,7 +476,7 @@ class IndexController extends Zend_Controller_Action
                 $businessContact, $businessHours, $businessDays, $businessClosing, $businessCity, 
                 $businessIndustry, $businessZip, $businessActive, $businessAgent);
                 
-                $this->_helper->redirector('index');
+                $this->_helper->redirector('view-clients');
             } else {
                 $form->populate($formData);
             }
@@ -531,6 +531,18 @@ class IndexController extends Zend_Controller_Action
         } else {
         	$this->view->form = $form;
         }
+    }
+    
+    public function exportClientsAction()
+    {
+        $result = new Default_Model_Clients();
+                
+        $document = $result->fetchExportResults();
+        $this->_helper->layout()->resetMvcInstance();
+        $this->getResponse()
+        		->setHeader('Content-type', 'text/plain')
+        		->setHeader('Content-Disposition', 'attachment; filename=kalys-export.txt')
+        		->setBody($document);
     }
     
     
