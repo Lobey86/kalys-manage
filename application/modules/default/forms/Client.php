@@ -65,7 +65,8 @@ class Default_Form_Client extends Zend_Form
               ->addFilter('StringTrim')
               ->addValidator('NotEmpty');
                             
-        $city = new Zend_Form_Element_Select('city');
+        //$city = new Zend_Form_Element_Select('city');
+        $city = new Zend_Form_Element_Text('city');
         $city->setLabel('City')
               ->setRequired(true)
               ->addFilter('StripTags')

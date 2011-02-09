@@ -1,3 +1,4 @@
+
 <?php 
 $this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8');
 $this->headTitle()->setSeparator(' - ');
@@ -8,7 +9,8 @@ echo $this->doctype(); ?>
 <head>
     <?php echo $this->headMeta(); ?> 
     <?php echo $this->headTitle(); ?>
-    <?php echo $this->headLink()->prependStylesheet($this->baseUrl().'/styles/style.css'); ?>
+    <?php echo $this->headLink()->prependStylesheet($this->baseUrl().'/styles/style.css')
+    							->appendStylesheet($this->baseUrl().'/styles/flick/jquery-ui-1.8.9.custom.css'); ?>
     <?php echo $this->headScript();?>
 </head>
 <body>
@@ -20,38 +22,38 @@ echo $this->doctype(); ?>
 <div class="sidebar">
 <div>
 	<a href="<?php echo $this->url(array('controller'=>'index', 
-		'action'=>'view-clients'));?>">View Clients</a>
+		'action'=>'view-clients'), null, true);?>">View Clients</a>
 	<a href="<?php echo $this->url(array('controller'=>'index', 
-		'action'=>'add-client'));?>">Add new Client</a></div>
+		'action'=>'add-client'), null, true);?>">Add new Client</a></div>
 <div>
 	<a href="<?php echo $this->url(array('controller'=>'index', 
-		'action'=>'view-agents'));?>">View Agents</a>
+		'action'=>'view-agents'), null, true);?>">View Agents</a>
 	<a href="<?php echo $this->url(array('controller'=>'index', 
-		'action'=>'add-agent'));?>">Add new Agent</a></div>
+		'action'=>'add-agent'), null, true);?>">Add new Agent</a></div>
 <div>
 	<a href="<?php echo $this->url(array('controller'=>'index', 
-		'action'=>'view-cities'));?>"><?php echo $this->translate('View Cities')?></a>
+		'action'=>'view-cities'), null, true);?>"><?php echo $this->translate('View Cities')?></a>
 	<a href="<?php echo $this->url(array('controller'=>'index', 
-		'action'=>'add-city'));?>">Add new City</a></div>
+		'action'=>'add-city'), null, true);?>">Add new City</a></div>
 <div>
 	<a href="<?php echo $this->url(array('controller'=>'index', 
-		'action'=>'view-industries'));?>">View Industries</a>
+		'action'=>'view-industries'), null, true);?>">View Industries</a>
 	<a href="<?php echo $this->url(array('controller'=>'index', 
-		'action'=>'add-industry'));?>">Add new Industry</a></div>
+		'action'=>'add-industry'), null, true);?>">Add new Industry</a></div>
 <div>
 	<a href="<?php echo $this->url(array('controller'=>'index', 
-		'action'=>'view-data-types'));?>">View Data Types</a>
+		'action'=>'view-data-types'), null, true);?>">View Data Types</a>
 	<a href="<?php echo $this->url(array('controller'=>'index', 
-		'action'=>'add-data-type'));?>">Add new Data Type</a></div>
+		'action'=>'add-data-type'), null, true);?>">Add new Data Type</a></div>
 <div>
 	<a href="<?php echo $this->url(array('controller'=>'index', 
-		'action'=>'view-event-types'));?>">View Event Types</a>
+		'action'=>'view-event-types'), null, true);?>">View Event Types</a>
 	<a href="<?php echo $this->url(array('controller'=>'index', 
-		'action'=>'add-event-type'));?>">Add new Event Type</a></div>
+		'action'=>'add-event-type'), null, true);?>">Add new Event Type</a></div>
 <div><a href="<?php echo $this->url(array('controller'=>'index', 
-		'action'=>'search-clients'));?>">Search Client Database</a></div>
+		'action'=>'search-clients'), null, true);?>">Search Client Database</a></div>
 <div><a href="<?php echo $this->url(array('controller'=>'index', 
-		'action'=>'export-clients'));?>">Export Database</a></div>
+		'action'=>'export-clients'), null, true);?>">Export Database</a></div>
 </div>
 <div class="content">
     

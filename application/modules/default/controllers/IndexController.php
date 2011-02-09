@@ -260,7 +260,8 @@ class IndexController extends Zend_Controller_Action
     {
     	
     	$cities = new Default_Model_City();
-    	$this->view->cities = $cities->fetchAll();
+    	//$this->view->cities = $cities->fetchAll();
+    	$this->view->cities = $cities->getAllCitiesSelect();
     	
     }
 
@@ -303,6 +304,14 @@ class IndexController extends Zend_Controller_Action
         
         $this->view->form = $form;
             
+    }
+    public function cityListAction(){
+    	$results = new Default_Model_City();
+    	$document = $results->cityComplete($this->_getParam('term'));
+        $this->_helper->layout()->resetMvcInstance();
+        $this->getResponse()
+        	->setHeader('Content-type', 'text/html')
+            ->setBody($document);    	
     }
     
     public function addClientEventAction()
@@ -391,8 +400,8 @@ class IndexController extends Zend_Controller_Action
         $form = new Default_Form_Client();
         $form->submit->setLabel('Add');
         
-        $cities = new Default_Model_City();
-        $form->getElement('city')->setMultiOptions($cities->getAllCitiesSelect());
+        //$cities = new Default_Model_City();
+        //$form->getElement('city')->setMultiOptions($cities->getAllCitiesSelect());
 
         $agents = new Default_Model_Agents();
         $form->getElement('agent_id')->setMultiOptions($agents->getAllAgentsSelect());
@@ -544,10 +553,8 @@ class IndexController extends Zend_Controller_Action
         		->setHeader('Content-Disposition', 'attachment; filename=kalys-export.txt')
         		->setBody($document);
     }
-    
-    
 
-    public function deleteAction()
+    public function deleteClientAction()
     {
         if ($this->getRequest()->isPost()) {
             $del = $this->getRequest()->getPost('del');

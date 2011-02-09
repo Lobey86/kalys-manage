@@ -22,7 +22,7 @@ body {
 .sidebar a {display: block;padding: 3px 8px;text-decoration: none;}
 .sidebar a:hover {text-decoration:underline;color:#000000;}
 
-.content {float:left;width:650px;margin:15px 0;padding:10px;}
+.content {float:left;width:1000px;margin:15px 0;padding:10px;}
 
 
 a {
@@ -43,4 +43,15 @@ a {
 	text-align: center;
 	font-family:Tahoma;
 	
+}
+.cityLetter {float:left;width:190px;padding:10px;}
+.close-icon {
+background-position: -96px -128px;
+background-image: url("/styles/flick/images/ui-icons_ff0084_256x240.png");
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -99999px;	
 }

@@ -23,7 +23,7 @@ $this->headTitle($this->title);
         <a href="<?php echo $this->url(array('controller'=>'index', 
             'action'=>'edit-client', 'id'=>$client->id));?>">Edit</a>
         <a href="<?php echo $this->url(array('controller'=>'index', 
-            'action'=>'delete', 'id'=>$client->id));?>">Delete</a>
+            'action'=>'deleteClient', 'id'=>$client->id));?>">Delete</a>
     </td>
 </tr>
 <?php endforeach; ?>

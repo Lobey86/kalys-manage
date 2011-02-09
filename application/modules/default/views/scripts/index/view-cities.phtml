@@ -3,13 +3,32 @@ $this->title = "View Cities";
 $this->headTitle($this->title);
 ?>
 
-<table cellpadding="2" cellspacing="2" border="0">
-<?php foreach($this->cities as $city) : ?>
-<tr>
-	<td><?php echo $this->escape($city->name);?></td>
-    <td><a href="<?php echo $this->url(array('controller'=>'index', 
-            'action'=>'delete-city', 'id'=>$city->id));?>">Delete</a></td>
+<table cellpadding="0" cellspacing="0" border="0">
+<tr><td valign='top' width="auto">
+<?php
+$iterator = 0;
+$break = false;
+for ($j=65;$j<=90;$j++){
+	
+	if ($break) print "</td><td valign='top' width='auto'><h3>".chr($j)."</h3>";
+	else print "<h3>".chr($j)."</h3>";
+	
+	foreach($this->cities as $id=>$city){
+		
+		if ($j==ord(substr($city,0,1))) {
+			$iterator++;
+		echo "<div><span style='display:inline'>".$this->escape($city)."</span>";
+		echo "<a class='close-icon' href=".$this->url(array('controller'=>'index', 
+            'action'=>'delete-city', 'id'=>$id))."></a>
+            </div>";
+		if ($iterator%70==0) {$break=true;break;}
+		else $break=false;
+		
+		}
+	}
+	
+}
+?>
+</td>
 </tr>
-<?php endforeach; ?>
 </table>
-

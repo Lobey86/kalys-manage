@@ -8,10 +8,29 @@ class Default_Model_City extends Zend_Db_Table_Abstract {
     {
     	$select = $this->getAdapter()->select()
     		->from($this->_name, array('id', 'name'))
+    		->order('name ASC')
     		;
     	return $this->getAdapter()->fetchPairs($select);
     }
-	
+    
+    
+    
+    public function cityComplete($term)
+    {
+        $cities = $this->getAllCitiesSelect();
+    	$results = '[';
+    	foreach ($cities as $id=>$city){
+    		if (stristr($city,$term)) {
+    		$results .= '{ "id":"'.$id.'","label":"'.$city.'","value":"'.$city.'"},';
+    		}
+    	}
+    	
+    	$results .= ']';
+    	
+    	return $results;
+    	
+    }
+    	
 	public function getCity($id)
     {
         $id = (int)$id;
