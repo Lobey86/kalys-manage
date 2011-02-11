@@ -7,7 +7,7 @@ $this->headTitle($this->title);
 <?php foreach($this->industries as $industry) : ?>
 <tr>
 	<td><?php echo $this->escape($industry->name);?></td>
-    <td><a href="<?php echo $this->url(array('controller'=>'index', 
+    <td><a class="delete-icon" href="<?php echo $this->url(array('controller'=>'index', 
             'action'=>'delete-industry', 'id'=>$industry->id));?>">Delete</a></td>
 </tr>
 <?php endforeach; ?>

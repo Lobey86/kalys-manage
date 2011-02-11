@@ -6,16 +6,15 @@ $this->headTitle($this->title);
 <table>
 <tr>
     <th>Name</th>
-    <th>Phone</th>
     <th>&nbsp;</th>
 </tr>
 <?php foreach($this->agents as $agent) : ?>
 <tr>
     <td><?php echo $this->escape($agent->name);?></td>
     <td>
-        <a href="<?php echo $this->url(array('controller'=>'index', 
+        <a class="edit-icon" href="<?php echo $this->url(array('controller'=>'index', 
             'action'=>'edit-agent', 'id'=>$agent->id));?>">Edit</a>
-        <a href="<?php echo $this->url(array('controller'=>'index', 
+        <a class="delete-icon" href="<?php echo $this->url(array('controller'=>'index', 
             'action'=>'delete-agent', 'id'=>$agent->id));?>">Delete</a>
     </td>
 </tr>

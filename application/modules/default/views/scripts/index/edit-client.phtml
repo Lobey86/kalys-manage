@@ -2,8 +2,6 @@
 $this->title = "Edit Client";
 $this->headTitle($this->title);
 
-
-
 ?>
 <table cellpadding="3" cellspacing="3" border="0">
 	<tr>
@@ -27,7 +25,7 @@ $this->headTitle($this->title);
 	            <td valign="top"><strong><?php echo $data['data_type_name'];?>:</strong></td>
 	            <td valign="top"><?php echo $data['data_value']; ?></td>
 	            <td valign="top">	            	
-            		<a href="<?php echo $this->url(array('controller'=>'index', 
+            		<a class="delete-icon" href="<?php echo $this->url(array('controller'=>'index', 
             'action'=>'delete-client-data', 'id'=>$data["id"]));?>">delete</a>
 				</td>
             </tr>
@@ -51,7 +49,7 @@ $this->headTitle($this->title);
 		            <td valign="top"><?php echo $event['time_start']; ?></td>
 		            <td valign="top"><?php echo $event['time_end']; ?></td>
 		            <td valign="top">	            	
-	            		<a href="<?php echo $this->url(array('controller'=>'index', 
+	            		<a class="delete-icon" href="<?php echo $this->url(array('controller'=>'index', 
 	            'action'=>'delete-client-event', 'id'=>$event["id"]));?>">delete</a>
 					</td>
 	            </tr>

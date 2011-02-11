@@ -16,11 +16,56 @@ $this->headScript()
 	->appendScript($script,'text/javascript');
 
 ?>
-
-
-
+<form id="client" enctype="application/x-www-form-urlencoded" action="" method="post">
 <table cellpadding="3" cellspacing="3" border="0">
 	<tr>
-		<td valign="top"><?php echo $this->form ;?></td>
+		<td valign="top">
+			<?php echo $this->form->getElement('name')->render(); ?>
+		</td>
+		<td valign="top">
+			<?php echo $this->form->getElement('phone')->render(); ?>
+		</td>
+		<td valign="top">
+			<?php echo $this->form->getElement('fax')->render();?>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<?php echo $this->form->getElement('address')->render();?>
+		</td>
+		<td valign="top">
+			<?php echo $this->form->getElement('contact_name')->render();?>
+		</td>
+		<td valign="top">
+			<?php echo $this->form->getElement('working_hours')->render();?>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<?php echo $this->form->getElement('closing_day')->render();?>
+		</td>
+		<td valign="top">
+			<?php echo $this->form->getElement('city')->render();?>
+		</td>
+		<td valign="top">
+			<?php echo $this->form->getElement('zip_code')->render();?>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<?php echo $this->form->getElement('industry')->render();?>
+		</td>
+		<td valign="top">
+			<?php echo $this->form->getElement('agent_id')->render();?>
+		</td>
+		<td valign="top">
+			<?php echo $this->form->getElement('active')->render();?>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3" align="right">
+			<?php echo $this->form->getElement('submit')->render();?>
+		</td>
 	</tr>
 </table>
+</form>

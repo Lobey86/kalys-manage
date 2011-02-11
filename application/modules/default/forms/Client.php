@@ -15,7 +15,7 @@ class Default_Form_Client extends Zend_Form
                ->addFilter('StripTags')
                ->addFilter('StringTrim')
                ->addValidator('NotEmpty');
-
+               
         $phone = new Zend_Form_Element_Text('phone');
         $phone->setLabel('Company Phone Number')
               ->setRequired(true)
@@ -64,8 +64,7 @@ class Default_Form_Client extends Zend_Form
               ->addFilter('StripTags')
               ->addFilter('StringTrim')
               ->addValidator('NotEmpty');
-                            
-        //$city = new Zend_Form_Element_Select('city');
+
         $city = new Zend_Form_Element_Text('city');
         $city->setLabel('City')
               ->setRequired(true)
@@ -109,5 +108,6 @@ class Default_Form_Client extends Zend_Form
         		$name,$phone,$fax,$contact,$workingdays,$workinghours,$closingday,
         		$address,$city,$zipcode,$industry,$active,$agent,        		
         		$submit));
+        		
     }
 }

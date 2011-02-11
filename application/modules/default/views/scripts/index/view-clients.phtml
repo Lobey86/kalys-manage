@@ -20,10 +20,10 @@ $this->headTitle($this->title);
     <td><?php echo $this->escape($this->cities[$client->city]);?></td>
     <td><?php echo $this->escape($this->agents[$client->agent_id]);?></td>
     <td>
-        <a href="<?php echo $this->url(array('controller'=>'index', 
+        <a class="edit-icon" href="<?php echo $this->url(array('controller'=>'index', 
             'action'=>'edit-client', 'id'=>$client->id));?>">Edit</a>
-        <a href="<?php echo $this->url(array('controller'=>'index', 
-            'action'=>'deleteClient', 'id'=>$client->id));?>">Delete</a>
+        <a class="delete-icon" href="<?php echo $this->url(array('controller'=>'index', 
+            'action'=>'delete-client', 'id'=>$client->id));?>">Delete</a>
     </td>
 </tr>
 <?php endforeach; ?>

@@ -452,8 +452,8 @@ class IndexController extends Zend_Controller_Action
         $this->view->formDataType = $formDataType;
         
         
-        $cities = new Default_Model_City();
-        $form->getElement('city')->setMultiOptions($cities->getAllCitiesSelect());
+        //$cities = new Default_Model_City();
+        //$form->getElement('city')->setMultiOptions($cities->getAllCitiesSelect());
 
         $agents = new Default_Model_Agents();
         $form->getElement('agent_id')->setMultiOptions($agents->getAllAgentsSelect());
@@ -563,7 +563,7 @@ class IndexController extends Zend_Controller_Action
                 $albums = new Default_Model_Clients();
                 $albums->deleteClient($id);
             }
-            $this->_helper->redirector('index');
+            $this->_helper->redirector('view-clients');
         } else {
             $id = $this->_getParam('id', 0);
             $clients = new Default_Model_Clients();

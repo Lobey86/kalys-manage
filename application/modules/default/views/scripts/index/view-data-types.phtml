@@ -7,7 +7,7 @@ $this->headTitle($this->title);
 <?php foreach($this->datatypes as $datatype) : ?>
 <tr>
 	<td><?php echo $this->escape($datatype->data_type_name);?></td>
-    <td><a href="<?php echo $this->url(array('controller'=>'index', 
+    <td><a class="delete-icon" href="<?php echo $this->url(array('controller'=>'index', 
             'action'=>'delete-data-types', 'id'=>$datatype->id));?>">Delete</a></td>
 </tr>
 <?php endforeach; ?>

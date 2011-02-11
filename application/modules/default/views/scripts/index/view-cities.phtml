@@ -18,7 +18,7 @@ for ($j=65;$j<=90;$j++){
 		if ($j==ord(substr($city,0,1))) {
 			$iterator++;
 		echo "<div><span style='display:inline'>".$this->escape($city)."</span>";
-		echo "<a class='close-icon' href=".$this->url(array('controller'=>'index', 
+		echo "<a class='delete-icon' href=".$this->url(array('controller'=>'index', 
             'action'=>'delete-city', 'id'=>$id))."></a>
             </div>";
 		if ($iterator%70==0) {$break=true;break;}

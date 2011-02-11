@@ -45,9 +45,9 @@ a {
 	
 }
 .cityLetter {float:left;width:190px;padding:10px;}
-.close-icon {
-background-position: -96px -128px;
-background-image: url("/styles/flick/images/ui-icons_ff0084_256x240.png");
+.delete-icon {
+background-position: -32px -192px;
+background-image: url("/styles/flick/images/ui-icons_454545_256x240.png");
     height: 16px;
     width: 16px;
     background-repeat: no-repeat;
@@ -55,3 +55,15 @@ background-image: url("/styles/flick/images/ui-icons_ff0084_256x240.png");
     overflow: hidden;
     text-indent: -99999px;	
 }
+.edit-icon {
+background-position: -16px -144px;
+background-image: url("/styles/flick/images/ui-icons_454545_256x240.png");
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -99999px;	
+}
+
+ul.errors {margin:0px;padding:0px;list-style-type: none;font-size:10px;color:#ff0000;}
